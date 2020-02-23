@@ -6,8 +6,8 @@ const UserSchema = new Schema({
        type : String,
        required : true
    } ,
-   email : {
-       type : String,
+   regno: {
+       type : Number,
        required : true
    },
    password : {

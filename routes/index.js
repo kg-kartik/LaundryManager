@@ -8,10 +8,10 @@ router.get('/',(req,res) => {
 })
 
 //Dashboard page
-router.get('/dashboard', ensureAuthenticated, (req,res) => {
+router.get('/dashboard/:name', ensureAuthenticated, (req,res) => {
     res.render('dashboard',{
-        name : req.user.name
-    });
+        name : req.params.name
+    })
 })
 
 module.exports = router;

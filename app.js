@@ -48,6 +48,7 @@ app.set('view engine','ejs');
 
 app.use('/',require('./routes/index.js'));
 app.use('/users',require('./routes/users.js'));
+// app.use('/admin',require('/routes/admin.js'))
 
 app.listen(PORT, console.log(`Server started on ${PORT}`));
 

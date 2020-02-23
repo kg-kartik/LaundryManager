@@ -8,19 +8,19 @@ const User = require('../models/user');
 
 
 const validator = (passport) =>{
-    passport.use(new LocalStrategy({usernameField : 'email'}, (email,password,done) =>{ 
+    passport.use(new LocalStrategy({usernameField : 'regno'}, (regno,password,done) =>{ 
         //Matching User
-        User.findOne({email : email})
+        User.findOne({regno : regno})
         .then((user) => {
             if(!user)
             {
-                return done(null,false, {message : "Incorrect email" })
+                return done(null,false, {message : "Incorrect Registeration No" })
             }
             //Matching passwords 
 
             bcrypt.compare(password,user.password,(err,isMatch) => {
                 if(err) {
-                    throw err;
+                    console.log(err);
                 }
                 if(isMatch) {
                     return done(null,user); //null is for the error part

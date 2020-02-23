@@ -5,13 +5,13 @@
         <% include ./partials/messages %>
         <form action="/users/login" method="POST">
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="regno">Registeration No</label>
             <input
-              type="email"
-              id="email"
-              name="email"
+              type="number"
+              id="regno"
+              name="regno"
               class="form-control"
-              placeholder="Enter Email"
+              placeholder="Enter Registeration No"
             />
           </div>
           <div class="form-group">
@@ -26,9 +26,6 @@
           </div>
           <button type="submit" class="btn btn-primary btn-block">Login</button>
         </form>
-        <p class="lead mt-4">
-          No Account? <a href="/users/register">Register</a>
-        </p>
       </div>
     </div>
   </div>
