@@ -8,7 +8,7 @@ router.get('/',(req,res) => {
 })
 
 //Dashboard page
-router.get('/dashboard/:name', ensureAuthenticated, (req,res) => {
+router.get('/dashboard', ensureAuthenticated, (req,res) => {
     res.render('dashboard',{
         name : req.params.name
     })

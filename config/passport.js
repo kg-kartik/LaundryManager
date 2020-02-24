@@ -23,7 +23,8 @@ const validator = (passport) =>{
                     console.log(err);
                 }
                 if(isMatch) {
-                    return done(null,user); //null is for the error part
+
+                   return done(null,user); //null is for the error part
                 }
                 else {
                     return done(err,false,{message : "Password is incorrect"})
