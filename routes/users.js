@@ -10,16 +10,6 @@ router.get('/login',(req,res) => {
     res.render('login');
 })
 
-//Login Handle
-// router.post('/login',(req,res,next) => {
-
-//     passport.authenticate('local',{
-//         successRedirect : '/dashboard',
-//         failureRedirect : '/users/login',
-//         failureFlash : true,
-//         successFlash : 'Welcome to the dashboard'
-//     }) (req,res,next)
-// })
 router.post('/login', function(req, res, next) {
     passport.authenticate('local', function(err, user, info) {
       if (err) { return next(err); }
