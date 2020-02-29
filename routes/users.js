@@ -24,13 +24,13 @@ router.get('/login',(req,res) => {
   });
 
 
-// router.post('/login', (req, res, next) => {
-//     passport.authenticate('local', {
-//       successRedirect: '/users/dashboard',
-//       failureRedirect: '/users/login',
-//       failureFlash: true
-//     })(req, res, next);
-//   });
+router.post('/login', (req, res, next) => {
+    passport.authenticate('local', {
+      successRedirect: '/users/dashboard',
+      failureRedirect: '/users/login',
+      failureFlash: true
+    })(req, res, next);
+  });
   
 
 //Logout Handle

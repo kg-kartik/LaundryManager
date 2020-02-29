@@ -4,17 +4,18 @@ const Schema = mongoose.Schema;
 //DetailsSchema
 const DetailsSchema = new Schema({
     count : Number,
-    stepone : Boolean,
-    steptwo : Boolean
+    stepone : String,
+    steptwo : String
 })
 
 //User Schema
-const UserSchema = new Schema({
+const UserSchema = new
+ Schema({
    name : {
        type : String,
        required : true
    } ,
-   regno: {
+   laundryid: {
        type : Number,
        required : true
    },
@@ -26,7 +27,8 @@ const UserSchema = new Schema({
        type : Date,
        default : Date.now
    },
-   details : [DetailsSchema]             //Relational Schema
+   details 
+   : [DetailsSchema]             //Relational Schema
 })
 
 const User = mongoose.model('User',UserSchema);

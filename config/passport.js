@@ -8,9 +8,9 @@ const User = require('../models/user');
 
 
 const validator = (passport) =>{
-    passport.use(new LocalStrategy({usernameField : 'regno'}, (regno,password,done) =>{ 
+    passport.use(new LocalStrategy({usernameField : 'laundryid'}, (laundryid,password,done) =>{ 
         //Matching User
-        User.findOne({regno : regno})
+        User.findOne({laundryid : laundryid})
         .then((user) => {
             if(!user)
             {
