@@ -1,2 +1,4 @@
-# Authentication_system
-Registering and making user login , and validating the details using Passport.js
+# Laundry Manager
+Tracking the laundrybag given by the user in the laundry.
+
+Work in Progress...
